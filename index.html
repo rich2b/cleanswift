@@ -1,1 +1,449 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101714">
+  <meta name="description" content="CLEANSWIFT provides premium home, office, deep cleaning, and sofa cleaning services.">
+  <title>CLEANSWIFT | Luxury Cleaning Services</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #101714;
+      color: #fffdf6;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #343b34;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d8bb77;
+    }
+
+    nav a {
+      color: #fffdf6;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d8bb77;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding: 100px 7%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #101714 15%, #101714df 60%, #10171455),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      color: #d8bb77;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 70px);
+      line-height: 1.12;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #d8bb77;
+    }
+
+    .hero p {
+      color: #d1d5ce;
+      max-width: 480px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #d8bb77;
+      color: #101714;
+      padding: 14px 23px;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .button:hover {
+      background: #f0d99f;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: #bdc4ba;
+    }
+
+    .services {
+      background: #f7f5ef;
+      color: #172019;
+    }
+
+    .services .section-heading p {
+      color: #626a62;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 28px 24px;
+      border: 1px solid #e6e2d7;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #626a62;
+      font-size: 14px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .about p {
+      color: #c6ccc4;
+      margin-top: 15px;
+    }
+
+    .booking {
+      background: #19231c;
+    }
+
+    .booking-wrap {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      gap: 17px;
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #e5e5dc;
+    }
+
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 7px;
+      background: #f7f5ef;
+      border: 1px solid #d8bb77;
+      border-radius: 4px;
+      font: inherit;
+      color: #172019;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .contact {
+      text-align: center;
+      background: #d8bb77;
+      color: #101714;
+    }
+
+    .contact .eyebrow {
+      color: #333b2d;
+    }
+
+    .contact p {
+      margin: 12px 0 24px;
+    }
+
+    .contact .button {
+      background: #101714;
+      color: #fff;
+    }
+
+    footer {
+      padding: 25px 7%;
+      text-align: center;
+      color: #b5bcb2;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 17px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 480px;
+        padding: 75px 6%;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">CLEAN<span>SWIFT</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Premium Cleaning Experience</div>
+        <h1>Luxury living starts with a <span>clean space.</span></h1>
+        <p>
+          Discover a new standard of cleanliness. CLEANSWIFT helps make
+          your home and workplace spotless, fresh, and welcoming.
+        </p>
+        <a class="button" href="#booking">Book a Cleaning</a>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-heading">
+        <div class="eyebrow">Our Services</div>
+        <h2>Cleaning, perfected.</h2>
+        <p>Thoughtful cleaning for the spaces that matter most.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">⌂</div>
+          <h3>Home Cleaning</h3>
+          <p>Enjoy a fresh, comfortable home with careful attention to detail.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">▤</div>
+          <h3>Office Cleaning</h3>
+          <p>Keep your workplace tidy, professional, and welcoming.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">✧</div>
+          <h3>Deep Cleaning</h3>
+          <p>Detailed cleaning for the areas that need extra care.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">◈</div>
+          <h3>Sofa & Carpet</h3>
+          <p>Refresh your soft furnishings and help your rooms feel renewed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="eyebrow">Why CLEANSWIFT</div>
+        <h2>More than clean. A better feeling.</h2>
+        <p>
+          We believe a clean space makes everyday life more comfortable.
+          Our goal is to make booking simple and provide thoughtful,
+          reliable cleaning tailored to each customer's needs.
+        </p>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+      <div class="booking-wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Your Fresh Start</div>
+          <h2>Request a cleaning</h2>
+          <p>Share your details to prepare a booking request.</p>
+        </div>
+
+        <form id="booking-form">
+          <label>
+            Full name
+            <input id="customer-name" required placeholder="Enter your name">
+          </label>
+
+          <label>
+            Phone number
+            <input id="customer-phone" type="tel" required
+              placeholder="Enter your phone number">
+          </label>
+
+          <label>
+            Choose a service
+            <select id="service" required>
+              <option value="">Select a cleaning service</option>
+              <option>Home Cleaning</option>
+              <option>Office Cleaning</option>
+              <option>Deep Cleaning</option>
+              <option>Sofa & Carpet Cleaning</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred date
+            <input id="date" type="date" required>
+          </label>
+
+          <label>
+            Location and additional details
+            <textarea id="details"
+              placeholder="Your area and what needs cleaning"></textarea>
+          </label>
+
+          <button class="button" type="submit">
+            Send Booking Request
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="eyebrow">A Fresher Space Awaits</div>
+      <h2>Ready for a spotless space?</h2>
+      <p>Get in touch and tell us about your cleaning needs.</p>
+      <a class="button" href="#booking">Get Started</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> CLEANSWIFT. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("date").min =
+      new Date().toISOString().split("T")[0];
+
+    document.getElementById("booking-form").addEventListener(
+      "submit",
+      function(event) {
+        event.preventDefault();
+
+        // Replace this with your WhatsApp number.
+        // Use country code and digits only, e.g. 2348012345678.
+        const businessWhatsApp = "";
+
+        if (!/^\d{10,15}$/.test(businessWhatsApp)) {
+          alert(
+            "Your booking form is ready. The business owner must add a WhatsApp number before requests can be sent."
+          );
+          return;
+        }
+
+        const message = [
+          "Hello CLEANSWIFT! I would like to request a cleaning.",
+          "Name: " + document.getElementById("customer-name").value,
+          "Phone: " + document.getElementById("customer-phone").value,
+          "Service: " + document.getElementById("service").value,
+          "Preferred date: " + document.getElementById("date").value,
+          "Location/details: " +
+            document.getElementById("details").value
+        ].join("\n");
+
+        const url =
+          "https://wa.me/" + businessWhatsApp +
+          "?text=" + encodeURIComponent(message);
+
+        window.open(url, "_blank");
+      }
+    );
+  </script>
+</body>
+  </html>
+          
